@@ -12,13 +12,10 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
-import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
-import com.badlogic.gdx.math.Circle;
-import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
@@ -30,8 +27,6 @@ import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.physics.box2d.World;
-import com.sun.corba.se.impl.oa.poa.ActiveObjectMap.Key;
-import com.sun.corba.se.spi.orbutil.fsm.State;
 
 
 
@@ -213,8 +208,8 @@ public class MyGdxGame extends ApplicationAdapter {
             scale = (float)width/(float)VIRTUAL_WIDTH;
         }
 
-        float w = (float)VIRTUAL_WIDTH*scale;
-        float h = (float)VIRTUAL_HEIGHT*scale;
+        float w = VIRTUAL_WIDTH*scale;
+        float h = VIRTUAL_HEIGHT*scale;
         viewport = new Rectangle(crop.x, crop.y, w, h);
 	}
 	
